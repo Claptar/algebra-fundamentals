@@ -1,0 +1,9 @@
+title: Algebra Fundamentals
+description: A motivated build-up of algebraic structures
+theme: jekyll-theme-minimal
+
+defaults:
+  - scope:
+      path: "chapters"
+    values:
+      layout: default
