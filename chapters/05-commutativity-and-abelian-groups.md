@@ -143,8 +143,4 @@ Associativity is needed to make finite composition coherent. Commutativity is an
 The next major step is to introduce two operations and ask how they interact. This leads to rings.
 
 
----
-
----
-
-[← README](README.md) | [← Previous](04-symmetries-and-groups.md) | [Next →](06-rings-and-distributivity.md)
+{% include chapter-nav.html %}

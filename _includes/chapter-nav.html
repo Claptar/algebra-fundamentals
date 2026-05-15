@@ -1,0 +1,22 @@
+{% assign chapters = site.pages | where_exp: "p", "p.path contains 'chapters/'" | sort: "path" %}
+{% assign prev_page = nil %}
+{% assign next_page = nil %}
+{% assign found = false %}
+{% for p in chapters %}
+  {% if found %}
+    {% unless next_page %}{% assign next_page = p %}{% endunless %}
+  {% elsif p.url == page.url %}
+    {% assign found = true %}
+  {% else %}
+    {% assign prev_page = p %}
+  {% endif %}
+{% endfor %}
+
+<nav class="chapter-nav" aria-label="Chapter navigation">
+  <div class="chapter-nav__prev">
+    {% if prev_page %}<a href="{{ prev_page.url | relative_url }}">← {{ prev_page.title }}</a>{% endif %}
+  </div>
+  <div class="chapter-nav__next">
+    {% if next_page %}<a href="{{ next_page.url | relative_url }}">{{ next_page.title }} →</a>{% endif %}
+  </div>
+</nav>

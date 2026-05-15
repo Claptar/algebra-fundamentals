@@ -182,8 +182,4 @@ A field is a ring where multiplication by nonzero elements is fully reversible a
 This makes fields ideal as coefficient systems. The next structure, vector spaces, uses fields as external systems of scalars.
 
 
----
-
----
-
-[← README](README.md) | [← Previous](06-rings-and-distributivity.md) | [Next →](08-vector-spaces.md)
+{% include chapter-nav.html %}

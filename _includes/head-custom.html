@@ -94,6 +94,32 @@
       display: none;
     }
   }
+
+  .chapter-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3em;
+    padding-top: 1.2em;
+    border-top: 1px solid #e5e7eb;
+    gap: 1em;
+  }
+
+  .chapter-nav__prev a,
+  .chapter-nav__next a {
+    color: #374151;
+    text-decoration: none;
+    font-size: 0.95em;
+  }
+
+  .chapter-nav__prev a:hover,
+  .chapter-nav__next a:hover {
+    color: #111827;
+    text-decoration: underline;
+  }
+
+  .chapter-nav__next {
+    text-align: right;
+  }
 </style>
 
 <script>

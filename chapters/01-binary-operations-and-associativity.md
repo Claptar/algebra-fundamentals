@@ -173,8 +173,4 @@ From here we can add more structure:
 - a second compatible operation $\Rightarrow$ ring.
 
 
----
-
----
-
-[← README](README.md) | [Next →](02-semigroups-and-monoids.md)
+{% include chapter-nav.html %}

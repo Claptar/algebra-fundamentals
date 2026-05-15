@@ -218,8 +218,4 @@ It is not a ring, because vectors do not necessarily multiply with each other.
 The next step is to add such an internal multiplication. That leads to algebras over fields.
 
 
----
-
----
-
-[← README](README.md) | [← Previous](07-fields-and-scalars.md) | [Next →](09-algebras-over-fields.md)
+{% include chapter-nav.html %}

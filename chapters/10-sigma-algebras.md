@@ -169,8 +169,4 @@ In sigma-algebras, the objects are subsets/events.
 The operations are logical set operations: not, or, and countable combinations.
 
 
----
-
----
-
-[← README](README.md) | [← Previous](09-algebras-over-fields.md) | [Next →](11-map-of-structures.md)
+{% include chapter-nav.html %}

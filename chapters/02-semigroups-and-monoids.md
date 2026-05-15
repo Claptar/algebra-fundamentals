@@ -157,8 +157,4 @@ Conceptually:
 The next step is to ask whether every step can be undone. That leads to groups.
 
 
----
-
----
-
-[← README](README.md) | [← Previous](01-binary-operations-and-associativity.md) | [Next →](03-groups-and-reversibility.md)
+{% include chapter-nav.html %}

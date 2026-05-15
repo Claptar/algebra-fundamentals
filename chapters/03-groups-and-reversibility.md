@@ -169,8 +169,4 @@ A group is not merely “a monoid with more axioms.” It is a shift from genera
 This leads naturally to the next idea: symmetries of objects.
 
 
----
-
----
-
-[← README](README.md) | [← Previous](02-semigroups-and-monoids.md) | [Next →](04-symmetries-and-groups.md)
+{% include chapter-nav.html %}

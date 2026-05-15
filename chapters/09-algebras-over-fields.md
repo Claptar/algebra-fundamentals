@@ -196,8 +196,4 @@ So an algebra is:
 > a vector space whose vectors also multiply, with multiplication compatible with linear combinations.
 
 
----
-
----
-
-[← README](README.md) | [← Previous](08-vector-spaces.md) | [Next →](10-sigma-algebras.md)
+{% include chapter-nav.html %}

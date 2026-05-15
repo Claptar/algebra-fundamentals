@@ -243,8 +243,4 @@ They are the natural setting for arithmetic, polynomials, matrices, and many alg
 The next step is to ask when multiplication is as well-behaved as possible. That leads to fields.
 
 
----
-
----
-
-[← README](README.md) | [← Previous](05-commutativity-and-abelian-groups.md) | [Next →](07-fields-and-scalars.md)
+{% include chapter-nav.html %}

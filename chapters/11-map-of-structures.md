@@ -141,6 +141,4 @@ They are collections of subsets closed under logical/countable operations, used 
 - **Algebra over a field:** a vector space with compatible internal multiplication.
 - **Sigma-algebra:** a stable language of measurable events.
 
----
-
-[← README](README.md) | [← Previous](10-sigma-algebras.md)
+{% include chapter-nav.html %}

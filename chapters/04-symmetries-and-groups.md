@@ -115,8 +115,4 @@ A group is not just an arbitrary algebraic object. It is exactly what appears wh
 This is why groups occur in geometry, number theory, physics, combinatorics, and the theory of equations.
 
 
----
-
----
-
-[← README](README.md) | [← Previous](03-groups-and-reversibility.md) | [Next →](05-commutativity-and-abelian-groups.md)
+{% include chapter-nav.html %}
