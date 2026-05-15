@@ -7,46 +7,40 @@ title: "8. Vector Spaces"
 
 ## Definition
 
-Let \(K\) be a field.
+Let $K$ be a field.
 
-A **vector space** over \(K\) is a set \(V\) with:
+A **vector space** over $K$ is a set $V$ with:
 
 1. vector addition
 
-\[
+$$
 +:V\times V\to V,
-\]
-
-making \((V,+)\) an abelian group;
+$$
+making $(V,+)$ an abelian group;
 
 2. scalar multiplication
 
-\[
+$$
 K\times V\to V,
 \qquad
 (\lambda,v)\mapsto \lambda v,
-\]
-
+$$
 satisfying compatibility axioms.
 
 The most important scalar axioms are:
 
-\[
+$$
 \lambda(u+v)=\lambda u+\lambda v,
-\]
-
-\[
+$$
+$$
 (\lambda+\mu)v=\lambda v+\mu v,
-\]
-
-\[
+$$
+$$
 (\lambda\mu)v=\lambda(\mu v),
-\]
-
-\[
+$$
+$$
 1v=v.
-\]
-
+$$
 ## Central intuition
 
 A vector space is a world of objects that can be:
@@ -57,10 +51,9 @@ A vector space is a world of objects that can be:
 
 The most important expression in a vector space is
 
-\[
+$$
 \lambda_1v_1+\cdots+\lambda_nv_n.
-\]
-
+$$
 So:
 
 > A vector space is a space of linear combinations.
@@ -69,8 +62,8 @@ So:
 
 In a vector space, there are two kinds of objects:
 
-1. **vectors** \(v\in V\);
-2. **scalars** \(\lambda\in K\).
+1. **vectors** $v\in V$;
+2. **scalars** $\lambda\in K$.
 
 Vectors are the things being combined.
 
@@ -94,11 +87,10 @@ Examples:
 
 The order of contributions usually does not matter:
 
-\[
+$$
 u+v=v+u.
-\]
-
-That is why \((V,+)\) is an abelian group.
+$$
+That is why $(V,+)$ is an abelian group.
 
 ## What scalar multiplication adds
 
@@ -107,8 +99,8 @@ An abelian group lets us add and subtract.
 A vector space lets us also say:
 
 - take half of a vector;
-- multiply a vector by \(3\);
-- take \(2u-5v\);
+- multiply a vector by $3$;
+- take $2u-5v$;
 - express a vector in coordinates;
 - solve linear equations with coefficients.
 
@@ -118,27 +110,25 @@ The field provides a rich arithmetic of coefficients.
 
 There are two additions:
 
-1. vector addition \(u+v\);
-2. scalar addition \(\lambda+\mu\).
+1. vector addition $u+v$;
+2. scalar addition $\lambda+\mu$.
 
 Scalar multiplication must respect both.
 
 ### Scaling a vector sum
 
-\[
+$$
 \lambda(u+v)=\lambda u+\lambda v.
-\]
-
+$$
 Meaning:
 
 > Scaling a sum of vectors equals the sum of the scaled parts.
 
 ### Splitting a scalar
 
-\[
+$$
 (\lambda+\mu)v=\lambda v+\mu v.
-\]
-
+$$
 Meaning:
 
 > Applying a sum of coefficients to a vector equals adding the separately scaled copies.
@@ -147,49 +137,46 @@ These two laws are the vector-space version of distributivity.
 
 ## Why the associativity of scalar multiplication matters
 
-\[
+$$
 (\lambda\mu)v=\lambda(\mu v).
-\]
-
+$$
 Meaning:
 
-> Scaling first by \(\mu\), then by \(\lambda\), is the same as scaling once by \(\lambda\mu\).
+> Scaling first by $\mu$, then by $\lambda$, is the same as scaling once by $\lambda\mu$.
 
 This ensures scalar multiplication really behaves like scaling.
 
-## Why \(1v=v\)
+## Why $1v=v$
 
-The scalar \(1\) is the neutral scale.
+The scalar $1$ is the neutral scale.
 
-Multiplying by \(1\) should not change a vector.
+Multiplying by $1$ should not change a vector.
 
 ## Natural examples
 
 ### Coordinate spaces
 
-\[
+$$
 K^n
-\]
-
+$$
 with componentwise addition and scalar multiplication is the standard example.
 
 ### Functions
 
-Functions \(X\to K\) form a vector space under pointwise operations.
+Functions $X\to K$ form a vector space under pointwise operations.
 
 ### Polynomials
 
-The set \(K[x]\) of polynomials is a vector space over \(K\).
+The set $K[x]$ of polynomials is a vector space over $K$.
 
 A polynomial is a linear combination of monomials:
 
-\[
+$$
 a_0+a_1x+a_2x^2+\cdots+a_nx^n.
-\]
-
+$$
 ### Matrices
 
-All \(m\times n\) matrices over \(K\) form a vector space.
+All $m\times n$ matrices over $K$ form a vector space.
 
 ### Solutions to homogeneous linear equations
 
@@ -229,3 +216,10 @@ A vector space combines:
 It is not a ring, because vectors do not necessarily multiply with each other.
 
 The next step is to add such an internal multiplication. That leads to algebras over fields.
+
+
+---
+
+---
+
+[← README](README.md) | [← Previous](07-fields-and-scalars.md) | [Next →](09-algebras-over-fields.md)

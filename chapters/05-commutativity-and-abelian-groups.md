@@ -9,11 +9,10 @@ title: "5. Commutativity and Abelian Groups"
 
 A binary operation is **commutative** if
 
-\[
+$$
 ab=ba
-\]
-
-for all elements \(a,b\).
+$$
+for all elements $a,b$.
 
 A group whose operation is commutative is called an **abelian group**.
 
@@ -34,12 +33,11 @@ So:
 
 In a non-commutative group,
 
-\[
+$$
 abc,
 \quad acb,
 \quad bac
-\]
-
+$$
 may all be different.
 
 In an abelian group, all rearrangements give the same result.
@@ -79,41 +77,37 @@ Non-commutativity is the algebraic language of order-sensitive processes.
 
 ### Integers under addition
 
-\[
+$$
 (\mathbb Z,+)
-\]
-
+$$
 is the basic abelian group.
 
 It models reversible one-dimensional displacement.
 
 ### Real vector spaces under addition
 
-\[
+$$
 (\mathbb R^n,+)
-\]
-
+$$
 is an abelian group.
 
-Geometrically, moving by \(u\) and then \(v\) ends at the same point as moving by \(v\) and then \(u\).
+Geometrically, moving by $u$ and then $v$ ends at the same point as moving by $v$ and then $u$.
 
 ### Numbers under addition
 
-\[
+$$
 (\mathbb Q,+),
 \quad (\mathbb R,+),
 \quad (\mathbb C,+)
-\]
-
+$$
 are abelian groups.
 
 ### Nonzero numbers under multiplication
 
-\[
+$$
 (\mathbb R^\times,\cdot),
 \quad (\mathbb C^\times,\cdot)
-\]
-
+$$
 are abelian groups.
 
 They model reversible scalar multiplication.
@@ -122,13 +116,12 @@ They model reversible scalar multiplication.
 
 Every cyclic group is abelian.
 
-If every element has the form \(g^n\), then
+If every element has the form $g^n$, then
 
-\[
+$$
 g^m g^n=g^{m+n}=g^{n+m}=g^n g^m.
-\]
-
-Examples include \(\mathbb Z\) and \(\mathbb Z/n\mathbb Z\).
+$$
+Examples include $\mathbb Z$ and $\mathbb Z/n\mathbb Z$.
 
 ## Useful contrast: non-abelian groups
 
@@ -148,3 +141,10 @@ Commutativity is not as foundational as associativity.
 Associativity is needed to make finite composition coherent. Commutativity is an additional simplification saying that the order of composition does not matter.
 
 The next major step is to introduce two operations and ask how they interact. This leads to rings.
+
+
+---
+
+---
+
+[← README](README.md) | [← Previous](04-symmetries-and-groups.md) | [Next →](06-rings-and-distributivity.md)

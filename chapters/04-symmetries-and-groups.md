@@ -33,10 +33,10 @@ So the word “symmetry” always comes with the question:
 
 A square has eight rigid symmetries:
 
-- rotation by \(0^\circ\);
-- rotation by \(90^\circ\);
-- rotation by \(180^\circ\);
-- rotation by \(270^\circ\);
+- rotation by $0^\circ$;
+- rotation by $90^\circ$;
+- rotation by $180^\circ$;
+- rotation by $270^\circ$;
 - four reflections.
 
 These transformations form a group because:
@@ -71,7 +71,7 @@ Examples:
 
 - a symmetry of a set is a bijection;
 - a symmetry of a graph is a vertex permutation preserving edges;
-- a symmetry of a group is a bijective homomorphism \(G\to G\);
+- a symmetry of a group is a bijective homomorphism $G\to G$;
 - a symmetry of a vector space is an invertible linear map.
 
 The set of all automorphisms of an object forms a group.
@@ -92,20 +92,18 @@ A group of symmetries often acts like a fingerprint of the object.
 
 ## Group actions
 
-A group can act on a set \(X\). This means each group element is realized as a symmetry or transformation of \(X\).
+A group can act on a set $X$. This means each group element is realized as a symmetry or transformation of $X$.
 
-Formally, a group action assigns to each \(g\in G\) a function \(X\to X\), satisfying
+Formally, a group action assigns to each $g\in G$ a function $X\to X$, satisfying
 
-\[
+$$
 e\cdot x=x,
-\]
-
+$$
 and
 
-\[
+$$
 (gh)\cdot x=g\cdot(h\cdot x).
-\]
-
+$$
 This is how abstract groups become concrete transformations.
 
 ## Place in the build-up
@@ -115,3 +113,10 @@ The idea of symmetry explains why groups are central.
 A group is not just an arbitrary algebraic object. It is exactly what appears when we collect all reversible transformations preserving a structure.
 
 This is why groups occur in geometry, number theory, physics, combinatorics, and the theory of equations.
+
+
+---
+
+---
+
+[← README](README.md) | [← Previous](03-groups-and-reversibility.md) | [Next →](05-commutativity-and-abelian-groups.md)

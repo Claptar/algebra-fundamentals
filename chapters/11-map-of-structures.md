@@ -24,70 +24,63 @@ title: "11. One-Page Map of the Structures"
 
 ### Associativity
 
-\[
+$$
 (ab)c=a(bc)
-\]
-
+$$
 Means: parentheses do not matter.
 
 It turns a binary operation into finite composition.
 
 ### Identity
 
-\[
+$$
 ea=ae=a
-\]
-
+$$
 Means: doing nothing is part of the structure.
 
 It allows empty products and zero-step processes.
 
 ### Inverse
 
-\[
+$$
 aa^{-1}=a^{-1}a=e
-\]
-
+$$
 Means: every action can be undone.
 
 It gives cancellation and equation-solving.
 
 ### Commutativity
 
-\[
+$$
 ab=ba
-\]
-
+$$
 Means: order does not matter.
 
 It turns sequences of operations into unordered contributions.
 
 ### Distributivity
 
-\[
+$$
 a(b+c)=ab+ac
-\]
-
+$$
 Means: multiplication respects additive decomposition.
 
 It allows computation by parts, expansion, and factoring.
 
 ### Scalar compatibility
 
-\[
+$$
 \lambda(u+v)=\lambda u+\lambda v
-\]
-
+$$
 Means: scaling respects vector addition.
 
 It makes linear combinations coherent.
 
 ### Bilinearity
 
-\[
+$$
 (\alpha x+\beta y)z=\alpha xz+\beta yz
-\]
-
+$$
 Means: internal multiplication in an algebra respects linear combinations in each input.
 
 ## Conceptual progression
@@ -147,3 +140,7 @@ They are collections of subsets closed under logical/countable operations, used 
 - **Vector space:** objects that admit linear combinations.
 - **Algebra over a field:** a vector space with compatible internal multiplication.
 - **Sigma-algebra:** a stable language of measurable events.
+
+---
+
+[← README](README.md) | [← Previous](10-sigma-algebras.md)

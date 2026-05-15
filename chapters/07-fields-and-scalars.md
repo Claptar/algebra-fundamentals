@@ -7,12 +7,12 @@ title: "7. Fields and Scalar Arithmetic"
 
 ## Definition
 
-A **field** \(K\) is a commutative ring with identity \(1\neq 0\) such that every nonzero element has a multiplicative inverse.
+A **field** $K$ is a commutative ring with identity $1\neq 0$ such that every nonzero element has a multiplicative inverse.
 
 Equivalently:
 
-1. \((K,+)\) is an abelian group;
-2. \((K\setminus\{0\},\cdot)\) is an abelian group;
+1. $(K,+)$ is an abelian group;
+2. $(K\setminus\{0\},\cdot)$ is an abelian group;
 3. multiplication distributes over addition.
 
 ## Central intuition
@@ -42,34 +42,30 @@ Multiplication scales, compares, and forms ratios.
 
 Distributivity connects them:
 
-\[
+$$
 a(b+c)=ab+ac.
-\]
-
+$$
 So multiplication is not just another addition. It acts on the additive world by scaling.
 
 ## Multiplication as scaling
 
-For fixed nonzero \(a\in K\), the map
+For fixed nonzero $a\in K$, the map
 
-\[
+$$
 x\mapsto ax
-\]
-
+$$
 is an invertible additive map.
 
 It satisfies
 
-\[
+$$
 a(x+y)=ax+ay,
-\]
-
+$$
 and its inverse is
 
-\[
+$$
 x\mapsto a^{-1}x.
-\]
-
+$$
 Thus:
 
 > A nonzero field element is an invertible scale transformation of the additive structure.
@@ -80,12 +76,11 @@ This is one of the best ways to understand fields.
 
 Fields model scalars, not general transformations.
 
-Scalars are scale factors. Applying scale \(a\) and then scale \(b\) gives the same result as applying \(b\) and then \(a\):
+Scalars are scale factors. Applying scale $a$ and then scale $b$ gives the same result as applying $b$ and then $a$:
 
-\[
+$$
 ab=ba.
-\]
-
+$$
 This is very different from matrices, where multiplication represents composition of transformations and order usually matters.
 
 So:
@@ -101,16 +96,14 @@ So:
 
 Equations like
 
-\[
+$$
 ax=b
-\]
+$$
+with $a\neq 0$ have the unique solution
 
-with \(a\neq 0\) have the unique solution
-
-\[
+$$
 x=a^{-1}b.
-\]
-
+$$
 ### Linear algebra
 
 Fields are the natural coefficient systems for vector spaces.
@@ -123,11 +116,10 @@ In a field, every nonzero quantity can be used as a unit of comparison.
 
 This makes ratios meaningful:
 
-\[
+$$
 \frac{a}{b}=ab^{-1},
 \qquad b\neq 0.
-\]
-
+$$
 ## What breaks outside fields
 
 In a general ring:
@@ -138,50 +130,45 @@ In a general ring:
 - equations may not be solvable by division;
 - linear algebra becomes module theory, which is subtler.
 
-Example: in \(\mathbb Z\), the equation
+Example: in $\mathbb Z$, the equation
 
-\[
+$$
 2x=1
-\]
-
+$$
 has no integer solution.
 
-So \(\mathbb Z\) is a ring, but not a field.
+So $\mathbb Z$ is a ring, but not a field.
 
 ## Natural examples
 
 ### Rational numbers
 
-\[
+$$
 \mathbb Q
-\]
-
+$$
 is the smallest familiar field containing the integers.
 
 ### Real numbers
 
-\[
+$$
 \mathbb R
-\]
-
+$$
 is the standard field for geometry, analysis, and classical linear algebra.
 
 ### Complex numbers
 
-\[
+$$
 \mathbb C
-\]
-
+$$
 is algebraically richer and essential in many areas of mathematics and physics.
 
 ### Finite fields
 
-For prime \(p\),
+For prime $p$,
 
-\[
+$$
 \mathbb F_p=\mathbb Z/p\mathbb Z
-\]
-
+$$
 is a field.
 
 Finite fields are central in coding theory, cryptography, combinatorics, and number theory.
@@ -193,3 +180,10 @@ A ring has addition and multiplication.
 A field is a ring where multiplication by nonzero elements is fully reversible and commutative.
 
 This makes fields ideal as coefficient systems. The next structure, vector spaces, uses fields as external systems of scalars.
+
+
+---
+
+---
+
+[← README](README.md) | [← Previous](06-rings-and-distributivity.md) | [Next →](08-vector-spaces.md)

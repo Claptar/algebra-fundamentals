@@ -7,15 +7,14 @@ title: "2. Semigroups and Monoids"
 
 ## Definitions
 
-A **semigroup** is a set \(S\) with an associative binary operation.
+A **semigroup** is a set $S$ with an associative binary operation.
 
-A **monoid** is a semigroup with an identity element \(e\), meaning
+A **monoid** is a semigroup with an identity element $e$, meaning
 
-\[
+$$
 ea=ae=a
-\]
-
-for all \(a\in S\).
+$$
+for all $a\in S$.
 
 ## Central intuition
 
@@ -38,27 +37,24 @@ So the difference is:
 
 In a monoid, the empty product is defined to be the identity:
 
-\[
+$$
 \prod_{i=1}^{0} a_i=e.
-\]
-
+$$
 This is not just a convention. It is the algebraic version of “no factors were used.”
 
 ### Zero-th powers
 
 In a monoid we can define
 
-\[
+$$
 a^0=e.
-\]
-
+$$
 Then the exponent law
 
-\[
+$$
 a^m a^n=a^{m+n}
-\]
-
-works even when \(m\) or \(n\) is zero.
+$$
+works even when $m$ or $n$ is zero.
 
 ### The empty action
 
@@ -70,16 +66,15 @@ Examples:
 - empty string;
 - zero vector for addition;
 - unit matrix;
-- number \(1\) for multiplication.
+- number $1$ for multiplication.
 
 ### A base point for inverses
 
 To define an inverse, we need something to return to:
 
-\[
+$$
 aa^{-1}=a^{-1}a=e.
-\]
-
+$$
 So groups depend conceptually on monoids.
 
 ## What happens if we remove the identity
@@ -89,7 +84,7 @@ Going from monoid to semigroup removes the null action.
 We lose:
 
 - empty products;
-- \(a^0\);
+- $a^0$;
 - the general notion of inverse;
 - the distinguished state of “nothing happened.”
 
@@ -99,10 +94,9 @@ But we may gain a more faithful model of processes that are necessarily non-empt
 
 ### Positive durations
 
-\[
+$$
 (0,\infty)
-\]
-
+$$
 under addition is a semigroup.
 
 A positive duration plus a positive duration is a positive duration. The zero duration is a boundary case, not a genuine elapsed interval.
@@ -127,41 +121,44 @@ Concatenation is associative. The empty history may be formally useful, but if w
 
 ### Positive-time evolution
 
-In analysis, one often studies operators \(T_t\) for \(t>0\) satisfying
+In analysis, one often studies operators $T_t$ for $t>0$ satisfying
 
-\[
+$$
 T_tT_s=T_{t+s}.
-\]
-
-The interesting dynamics may live at positive times. The time \(t=0\) can be a limiting or technical case rather than part of the main phenomenon.
+$$
+The interesting dynamics may live at positive times. The time $t=0$ can be a limiting or technical case rather than part of the main phenomenon.
 
 ## Adding an identity formally
 
-Every semigroup \(S\) can be enlarged to a monoid by adding a new element \(1\):
+Every semigroup $S$ can be enlarged to a monoid by adding a new element $1$:
 
-\[
+$$
 S^1=S\cup\{1\},
-\]
-
+$$
 with
 
-\[
+$$
 1s=s1=s.
-\]
-
+$$
 This shows that a monoid can often be seen as a semigroup completed by adding the empty step.
 
 ## Place in the build-up
 
 The progression is:
 
-\[
+$$
 \text{semigroup} \to \text{monoid}.
-\]
-
+$$
 Conceptually:
 
 - semigroup: composition of one or more steps;
 - monoid: composition of zero or more steps.
 
 The next step is to ask whether every step can be undone. That leads to groups.
+
+
+---
+
+---
+
+[← README](README.md) | [← Previous](01-binary-operations-and-associativity.md) | [Next →](03-groups-and-reversibility.md)

@@ -7,14 +7,13 @@ title: "3. Groups and Reversibility"
 
 ## Definition
 
-A **group** is a monoid \(G\) such that every element has an inverse.
+A **group** is a monoid $G$ such that every element has an inverse.
 
-That is, for every \(a\in G\), there exists \(a^{-1}\in G\) with
+That is, for every $a\in G$, there exists $a^{-1}\in G$ with
 
-\[
+$$
 aa^{-1}=a^{-1}a=e.
-\]
-
+$$
 ## Central intuition
 
 A group is the algebra of **reversible actions**.
@@ -33,7 +32,7 @@ So:
 
 ### Undoing actions
 
-If \(a\) is an action, \(a^{-1}\) is the action that cancels it.
+If $a$ is an action, $a^{-1}$ is the action that cancels it.
 
 This means elements of a group do not destroy information.
 
@@ -41,67 +40,58 @@ This means elements of a group do not destroy information.
 
 In a group, the equation
 
-\[
+$$
 ax=b
-\]
-
+$$
 has the unique solution
 
-\[
+$$
 x=a^{-1}b.
-\]
-
+$$
 Similarly,
 
-\[
+$$
 ya=b
-\]
-
+$$
 has the unique solution
 
-\[
+$$
 y=ba^{-1}.
-\]
-
+$$
 This is one of the main algebraic powers of inverses: they allow division-like reasoning.
 
 ### Cancellation
 
 If
 
-\[
+$$
 ax=ay,
-\]
+$$
+then multiplying on the left by $a^{-1}$ gives
 
-then multiplying on the left by \(a^{-1}\) gives
-
-\[
+$$
 x=y.
-\]
-
+$$
 Groups always have cancellation.
 
 ### Negative powers
 
 In a monoid we have
 
-\[
+$$
 a^0,a^1,a^2,\dots
-\]
-
+$$
 In a group we also have
 
-\[
+$$
 a^{-1},a^{-2},\dots
-\]
-
+$$
 So powers are indexed by all integers:
 
-\[
+$$
 a^n,
 \qquad n\in\mathbb Z.
-\]
-
+$$
 ## What breaks without inverses
 
 Without inverses, actions may be irreversible.
@@ -120,21 +110,19 @@ For example, a non-injective function can collapse two inputs into one output. O
 
 ### Integers under addition
 
-\[
+$$
 (\mathbb Z,+)
-\]
-
-is a group. The inverse of \(n\) is \(-n\).
+$$
+is a group. The inverse of $n$ is $-n$.
 
 This models reversible displacement along a line.
 
 ### Nonzero real numbers under multiplication
 
-\[
+$$
 (\mathbb R^\times,\cdot)
-\]
-
-is a group. The inverse of \(a\neq 0\) is \(1/a\).
+$$
+is a group. The inverse of $a\neq 0$ is $1/a$.
 
 This models reversible scaling.
 
@@ -146,27 +134,25 @@ Every permutation is reversible.
 
 ### Invertible matrices
 
-Invertible \(n\times n\) matrices over a field form a group:
+Invertible $n\times n$ matrices over a field form a group:
 
-\[
+$$
 GL_n(K).
-\]
-
+$$
 These are exactly the linear transformations that lose no information.
 
 ## Natural monoids that are not groups
 
 ### Natural numbers under addition
 
-\[
+$$
 (\mathbb N,+)
-\]
+$$
+is a monoid but not a group, because adding $5$ cannot be undone inside $\mathbb N$.
 
-is a monoid but not a group, because adding \(5\) cannot be undone inside \(\mathbb N\).
+Passing from $\mathbb N$ to $\mathbb Z$ can be viewed as adding formal additive inverses.
 
-Passing from \(\mathbb N\) to \(\mathbb Z\) can be viewed as adding formal additive inverses.
-
-### All functions \(X\to X\)
+### All functions $X\to X$
 
 All functions form a monoid under composition, but not a group. Only bijections are invertible.
 
@@ -181,3 +167,10 @@ The group is the point where algebra begins to model symmetry.
 A group is not merely “a monoid with more axioms.” It is a shift from general actions to reversible actions.
 
 This leads naturally to the next idea: symmetries of objects.
+
+
+---
+
+---
+
+[← README](README.md) | [← Previous](02-semigroups-and-monoids.md) | [Next →](04-symmetries-and-groups.md)

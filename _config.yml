@@ -2,6 +2,9 @@ title: Algebra Fundamentals
 description: A motivated build-up of algebraic structures
 theme: jekyll-theme-minimal
 
+kramdown:
+  math_engine: mathjax
+
 defaults:
   - scope:
       path: "chapters"
