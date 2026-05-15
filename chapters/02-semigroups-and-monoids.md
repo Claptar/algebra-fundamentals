@@ -1,3 +1,8 @@
+---
+layout: default
+title: "2. Semigroups and Monoids"
+---
+
 # 2. Semigroups and Monoids
 
 ## Definitions

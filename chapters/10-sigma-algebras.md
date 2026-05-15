@@ -1,3 +1,8 @@
+---
+layout: default
+title: "10. Sigma-Algebras"
+---
+
 # 10. Sigma-Algebras
 
 ## Warning about the word “algebra”

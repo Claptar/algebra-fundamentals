@@ -1,3 +1,8 @@
+---
+layout: default
+title: "9. Algebras over Fields"
+---
+
 # 9. Algebras over Fields
 
 ## Definition

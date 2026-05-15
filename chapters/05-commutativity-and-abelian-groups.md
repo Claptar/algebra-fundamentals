@@ -1,3 +1,8 @@
+---
+layout: default
+title: "5. Commutativity and Abelian Groups"
+---
+
 # 5. Commutativity and Abelian Groups
 
 ## Definition

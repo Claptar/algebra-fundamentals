@@ -1,3 +1,8 @@
+---
+layout: default
+title: "6. Rings and Distributivity"
+---
+
 # 6. Rings and Distributivity
 
 ## Definition

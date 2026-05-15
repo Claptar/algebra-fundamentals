@@ -1,3 +1,8 @@
+---
+layout: default
+title: "4. Symmetries and Groups"
+---
+
 # 4. Symmetries and Groups
 
 ## Central intuition

@@ -1,3 +1,8 @@
+---
+layout: default
+title: "3. Groups and Reversibility"
+---
+
 # 3. Groups and Reversibility
 
 ## Definition

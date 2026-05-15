@@ -1,3 +1,8 @@
+---
+layout: default
+title: "8. Vector Spaces"
+---
+
 # 8. Vector Spaces
 
 ## Definition

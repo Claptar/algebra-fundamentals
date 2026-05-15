@@ -1,3 +1,8 @@
+---
+layout: default
+title: "7. Fields and Scalar Arithmetic"
+---
+
 # 7. Fields and Scalar Arithmetic
 
 ## Definition

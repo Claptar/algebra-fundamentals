@@ -1,3 +1,8 @@
+---
+layout: default
+title: "11. One-Page Map of the Structures"
+---
+
 # 11. One-Page Map of the Structures
 
 ## The main algebraic ladder

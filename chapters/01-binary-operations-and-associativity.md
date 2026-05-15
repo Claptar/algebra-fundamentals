@@ -1,3 +1,8 @@
+---
+layout: default
+title: "1. Binary Operations and Associativity"
+---
+
 # 1. Binary Operations and Associativity
 
 ## Definition
