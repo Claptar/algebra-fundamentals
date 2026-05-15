@@ -1,0 +1,149 @@
+<style>
+  .book-sidebar {
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100vh;
+    padding: 28px 22px;
+    overflow-y: auto;
+    border-right: 1px solid #e5e7eb;
+    background: #ffffff;
+  }
+
+  .book-sidebar__title {
+    display: block;
+    margin-bottom: 18px;
+    color: #111827;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.3;
+    text-decoration: none;
+  }
+
+  .book-sidebar__section {
+    margin: 20px 0 8px;
+    color: #6b7280;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .book-sidebar__link {
+    display: block;
+    margin: 2px 0;
+    padding: 7px 9px;
+    border-radius: 6px;
+    color: #374151;
+    line-height: 1.35;
+    text-decoration: none;
+  }
+
+  .book-sidebar__link:hover,
+  .book-sidebar__link.is-active {
+    background: #f3f4f6;
+    color: #111827;
+  }
+
+  .book-sidebar__link.is-active {
+    font-weight: 700;
+  }
+
+  @media (min-width: 1180px) {
+    body {
+      padding-left: 220px;
+    }
+
+    body.book-inner-page .wrapper {
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 48px;
+    }
+
+    body.book-inner-page header,
+    body.book-inner-page footer,
+    body.book-inner-page aside {
+      display: none;
+    }
+
+    body.book-inner-page section {
+      float: none;
+      width: auto;
+      max-width: none;
+      border: 0;
+      padding: 0;
+    }
+  }
+
+  @media (max-width: 1179px) {
+    .book-sidebar {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const currentPath = window.location.pathname.replace(/\/$/, "/index.html");
+    const homePath = "{{ '/' | relative_url }}".replace(/\/$/, "/index.html");
+
+    if (currentPath !== homePath) {
+      document.body.classList.add("book-inner-page");
+    }
+
+    const links = [
+      { label: "Home", href: "{{ '/' | relative_url }}" },
+      { section: "Chapters" },
+      { label: "1. Binary Operations and Associativity", href: "{{ '/chapters/01-binary-operations-and-associativity.html' | relative_url }}" },
+      { label: "2. Semigroups and Monoids", href: "{{ '/chapters/02-semigroups-and-monoids.html' | relative_url }}" },
+      { label: "3. Groups and Reversibility", href: "{{ '/chapters/03-groups-and-reversibility.html' | relative_url }}" },
+      { label: "4. Symmetries and Groups", href: "{{ '/chapters/04-symmetries-and-groups.html' | relative_url }}" },
+      { label: "5. Commutativity and Abelian Groups", href: "{{ '/chapters/05-commutativity-and-abelian-groups.html' | relative_url }}" },
+      { label: "6. Rings and Distributivity", href: "{{ '/chapters/06-rings-and-distributivity.html' | relative_url }}" },
+      { label: "7. Fields and Scalar Arithmetic", href: "{{ '/chapters/07-fields-and-scalars.html' | relative_url }}" },
+      { label: "8. Vector Spaces", href: "{{ '/chapters/08-vector-spaces.html' | relative_url }}" },
+      { label: "9. Algebras over Fields", href: "{{ '/chapters/09-algebras-over-fields.html' | relative_url }}" },
+      { label: "10. Sigma-Algebras", href: "{{ '/chapters/10-sigma-algebras.html' | relative_url }}" },
+      { label: "11. Map of the Structures", href: "{{ '/chapters/11-map-of-structures.html' | relative_url }}" }
+    ];
+
+    const sidebar = document.createElement("nav");
+    sidebar.className = "book-sidebar";
+    sidebar.setAttribute("aria-label", "Book sections");
+
+    const title = document.createElement("a");
+    title.className = "book-sidebar__title";
+    title.href = "{{ '/' | relative_url }}";
+    title.textContent = "{{ site.title | default: 'Algebra Fundamentals' }}";
+    sidebar.appendChild(title);
+
+    links.forEach(function (item) {
+      if (item.section) {
+        const section = document.createElement("div");
+        section.className = "book-sidebar__section";
+        section.textContent = item.section;
+        sidebar.appendChild(section);
+        return;
+      }
+
+      const link = document.createElement("a");
+      const linkPath = new URL(item.href, window.location.origin).pathname.replace(/\/$/, "/index.html");
+      link.className = "book-sidebar__link";
+      link.href = item.href;
+      link.textContent = item.label;
+
+      if (linkPath === currentPath) {
+        link.classList.add("is-active");
+        link.setAttribute("aria-current", "page");
+      }
+
+      sidebar.appendChild(link);
+    });
+
+    document.body.prepend(sidebar);
+  });
+</script>
