@@ -1,8 +1,12 @@
+---
+title: "Linear Span, Basis, and Coordinates"
+---
+
 # Linear Span, Basis, and Coordinates
 
-## 4. Linear Span and Generation
+## 1. Linear Span and Generation
 
-### 4.1. What can a few vectors build?
+### 1.1. What can a few vectors build?
 
 Let $V$ be a vector space over a field $K$. Elements of $V$ are **vectors**, elements of $K$ are **scalars**. The fundamental operation of linear algebra combines them into a **linear combination**
 
@@ -10,7 +14,7 @@ $$\lambda_1 v_1 + \lambda_2 v_2 + \cdots + \lambda_m v_m, \qquad v_i \in V, \ \l
 
 This raises a natural question: given vectors $v_1, \dots, v_m$, what part of $V$ can we reach by linear combinations alone? The answer is the **linear span**.
 
-### 4.2. Linear span: two views of one object
+### 1.2. Linear span: two views of one object
 
 The **linear span** of $v_1, \dots, v_m \in V$ is the set of all their linear combinations:
 
@@ -22,7 +26,7 @@ Two complementary descriptions characterize this set, and both are worth holding
 
 *From above.* It is the **smallest subspace of $V$ containing $v_1, \dots, v_m$**. Any subspace containing the $v_i$ must, by closure, contain every linear combination of them; conversely, the set of all such combinations already is a subspace. So the span is exactly the closure of $\{v_1, \dots, v_m\}$ under the operations of linear algebra.
 
-### 4.3. Span in the plane: the geometry
+### 1.3. Span in the plane: the geometry
 
 A picture clarifies everything. In $\mathbb{R}^2$:
 
@@ -32,9 +36,9 @@ A picture clarifies everything. In $\mathbb{R}^2$:
 
 The lesson: what matters is not the *number* of vectors, but whether they contribute genuinely new directions.
 
-![Span in the plane](span_in_plane.svg)
+![Span in the plane](figures/span_in_plane.svg)
 
-### 4.4. Generation and redundancy
+### 1.4. Generation and redundancy
 
 We say $v_1, \dots, v_m$ **generate** (or **span**) $V$ if $\operatorname{span}(v_1, \dots, v_m) = V$. A generating system lets us build every vector — but it may do so inefficiently. For instance, in $\mathbb{R}^2$ with $e_1 = (1,0)$, $e_2 = (0,1)$, and $w = (1,1)$:
 
@@ -42,11 +46,11 @@ $$\operatorname{span}(e_1, e_2, w) = \operatorname{span}(e_1, e_2) = \mathbb{R}^
 
 because $w = e_1 + e_2$ adds nothing new. The vector $w$ is **redundant**.
 
-![Redundancy: w lies in the span of e1 and e2](redundancy.svg)
+![Redundancy: w lies in the span of e1 and e2](figures/redundancy.svg)
 
 Redundancy has a price: when generators are redundant, the same vector can be written as a linear combination in many different ways. To get **unique** representations, we need to eliminate redundancy.
 
-### 4.5. Linear independence
+### 1.5. Linear independence
 
 The vectors $v_1, \dots, v_m$ are **linearly dependent** if there exist scalars $\lambda_1, \dots, \lambda_m$, not all zero, with
 
@@ -60,7 +64,7 @@ $$v_m = -\tfrac{\lambda_1}{\lambda_m} v_1 - \cdots - \tfrac{\lambda_{m-1}}{\lamb
 
 So *independence means every vector contributes something the others cannot produce.*
 
-### 4.6. Basis
+### 1.6. Basis
 
 A **basis** of $V$ is a system $e = (e_1, \dots, e_n)$ that is both a generating system and linearly independent. Equivalently, a basis is:
 
@@ -75,13 +79,13 @@ Existence comes from generation; uniqueness comes from independence. A basis is 
 
 ---
 
-## 5. Dimension and Examples of Bases
+## 2. Dimension and Examples of Bases
 
-### 5.1. Dimension
+### 2.1. Dimension
 
 If $V$ has a basis of $n$ vectors, then $V$ is **$n$-dimensional**, written $\dim V = n$. A central theorem (which we will not prove here) guarantees this is well-defined: every basis of $V$ has the same number of vectors. Dimension is a property of the space itself, not of any particular basis.
 
-### 5.2. Three standard examples
+### 2.2. Three standard examples
 
 **Coordinate space $K^n$.** The standard basis is
 
@@ -93,7 +97,7 @@ so $\dim K^n = n$. Every $x = (x_1, \dots, x_n)$ is $x_1 e_1 + \cdots + x_n e_n$
 
 **Polynomials $K_{\leq n}[t]$.** The monomials $1, t, t^2, \dots, t^n$ form a basis, so $\dim K_{\leq n}[t] = n + 1$. But this is far from the only choice: the shifted basis $1,\ t-1,\ (t-1)^2,\ \dots,\ (t-1)^n$ also spans and is independent, and is more convenient for studying polynomials near $t = 1$.
 
-### 5.3. Natural vs. chosen bases
+### 2.3. Natural vs. chosen bases
 
 Some spaces come with a basis built into their definition: $K^n$, $\operatorname{Mat}_{m\times n}(K)$, $K_{\leq n}[t]$. Others do not.
 
@@ -103,9 +107,9 @@ This is where the central conceptual distinction of linear algebra emerges. A ve
 
 ---
 
-## 6. Coordinates: Vectors vs. Their Descriptions
+## 3. Coordinates: Vectors vs. Their Descriptions
 
-### 6.1. Coordinates require a basis
+### 3.1. Coordinates require a basis
 
 Fix a basis $e = (e_1, \dots, e_n)$ of $V$. Every $x \in V$ has a unique expansion $x = x_1 e_1 + \cdots + x_n e_n$, and the scalars $x_1, \dots, x_n$ are the **coordinates** of $x$ in the basis $e$. We collect them into the **coordinate column**
 
@@ -113,7 +117,7 @@ $$[x]_e = \begin{pmatrix} x_1 \\ \vdots \\ x_n \end{pmatrix} \in K^n.$$
 
 The notation matters. $x$ is an element of $V$; $[x]_e$ is a column of scalars. They live in different worlds. A useful analogy: a vector is like a house, and its coordinates are like its street address. The house exists regardless of how the city numbers its streets. Renumber the streets and the address changes — but the house has not moved.
 
-### 6.2. The same vector, different coordinates
+### 3.2. The same vector, different coordinates
 
 Take $V = \mathbb{R}^2$ and $x = (1, 1)$.
 
@@ -127,9 +131,9 @@ $$[x]_b = \begin{pmatrix} 0 \\ 1 \end{pmatrix}.$$
 
 The arrow has not moved. Only the basis changed, and with it the coordinate description.
 
-![Same vector x = (1,1) in two different bases](same_vector_different_coords.svg)
+![Same vector x = (1,1) in two different bases](figures/same_vector_different_coords.svg)
 
-### 6.3. The same column, different vectors
+### 3.3. The same column, different vectors
 
 The reverse is just as important. The column
 
@@ -146,7 +150,7 @@ is **not a vector** on its own — it is a recipe. The recipe says: *take one co
 
 Without a basis, the column has no object to act on.
 
-### 6.4. The coordinate map
+### 3.4. The coordinate map
 
 Choosing a basis $e$ defines a map
 
@@ -158,9 +162,9 @@ $$[x + y]_e = [x]_e + [y]_e, \qquad [\lambda x]_e = \lambda [x]_e.$$
 
 Both identities follow immediately from the definition: writing $x$ and $y$ as combinations of the $e_i$ and adding coefficient-by-coefficient produces the corresponding column equality. So once a basis is chosen, calculations in $V$ become calculations on columns in $K^n$.
 
-![Coordinate map between V and K^n](coordinate_map.svg)
+![Coordinate map between V and K^n](figures/coordinate_map.svg)
 
-### 6.5. The central distinction
+### 3.5. The central distinction
 
 We can now state the conceptual point cleanly.
 
@@ -169,3 +173,5 @@ We can now state the conceptual point cleanly.
 The same vector has different coordinate columns in different bases. The same coordinate column represents different vectors in different bases or different spaces. A vector does not need coordinates to exist; coordinates are how we calculate with vectors numerically once a basis has been fixed.
 
 This distinction is the bridge to everything that follows. With bases chosen, vectors become columns, linear maps become matrices, and a change of basis becomes a change of coordinate system. Underneath, the geometric objects remain unchanged. The coordinates are just the language we use to describe them.
+
+{% include chapter-nav.html %}
