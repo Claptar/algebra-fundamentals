@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 320" font-family="Georgia, 'Times New Roman', serif">
+  <defs>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#555"/>
+    </marker>
+  </defs>
+
+  <style>
+    .box { fill: #fafafa; stroke: #999; stroke-width: 1.5; rx: 6; }
+    .arr { stroke: #555; stroke-width: 1.8; fill: none; }
+    .scalar-a { fill: #c0392b; }
+    .scalar-b { fill: #1f4e79; }
+    .scalar-c { fill: #2e7d32; }
+    .scalar-d { fill: #b9770e; }
+    .panel-title { font-size: 14px; fill: #333; font-weight: bold; }
+    .math { font-size: 24px; font-family: 'Cambria Math', 'Times New Roman', serif; }
+    .iso-label { font-size: 14px; fill: #555; font-style: italic; }
+    .scalar-text { font-size: 22px; font-style: italic; font-family: 'Cambria Math', 'Times New Roman', serif; }
+  </style>
+
+  <text x="410" y="30" text-anchor="middle" class="panel-title">The same scalars (a, b, c, d) live in three isomorphic spaces</text>
+
+  <!-- Box 1: Matrix -->
+  <g transform="translate(40, 80)">
+    <rect class="box" width="200" height="170"/>
+    <text x="100" y="20" text-anchor="middle" font-size="13" fill="#666" font-style="italic">Mat₂ₓ₂(K)</text>
+
+    <!-- Bracket-style matrix -->
+    <text x="30" y="100" class="math" fill="#333">⎛</text>
+    <text x="30" y="125" class="math" fill="#333">⎝</text>
+    <text x="55" y="100" class="scalar-text scalar-a">a</text>
+    <text x="100" y="100" class="scalar-text scalar-b">b</text>
+    <text x="55" y="135" class="scalar-text scalar-c">c</text>
+    <text x="100" y="135" class="scalar-text scalar-d">d</text>
+    <text x="135" y="100" class="math" fill="#333">⎞</text>
+    <text x="135" y="125" class="math" fill="#333">⎠</text>
+  </g>
+
+  <!-- Box 2: Column -->
+  <g transform="translate(310, 80)">
+    <rect class="box" width="200" height="170"/>
+    <text x="100" y="20" text-anchor="middle" font-size="13" fill="#666" font-style="italic">K⁴</text>
+
+    <text x="65" y="55" class="math" fill="#333">⎛</text>
+    <text x="65" y="160" class="math" fill="#333">⎝</text>
+    <text x="125" y="55" class="math" fill="#333">⎞</text>
+    <text x="125" y="160" class="math" fill="#333">⎠</text>
+
+    <text x="95" y="75" class="scalar-text scalar-a">a</text>
+    <text x="95" y="105" class="scalar-text scalar-b">b</text>
+    <text x="95" y="135" class="scalar-text scalar-c">c</text>
+    <text x="95" y="160" class="scalar-text scalar-d">d</text>
+  </g>
+
+  <!-- Box 3: Polynomial -->
+  <g transform="translate(580, 80)">
+    <rect class="box" width="200" height="170"/>
+    <text x="100" y="20" text-anchor="middle" font-size="13" fill="#666" font-style="italic">K≤₃[t]</text>
+
+    <g transform="translate(20, 110)">
+      <text x="0" y="0" class="scalar-text scalar-a">a</text>
+      <text x="20" y="0" class="scalar-text" fill="#333">+</text>
+      <text x="40" y="0" class="scalar-text scalar-b">b</text>
+      <text x="58" y="0" class="scalar-text" fill="#333" font-style="italic">t</text>
+      <text x="74" y="0" class="scalar-text" fill="#333">+</text>
+      <text x="94" y="0" class="scalar-text scalar-c">c</text>
+      <text x="112" y="0" class="scalar-text" fill="#333" font-style="italic">t</text>
+      <text x="125" y="-10" font-size="14" fill="#333">2</text>
+      <text x="135" y="0" class="scalar-text" fill="#333">+</text>
+      <text x="155" y="0" class="scalar-text scalar-d">d</text>
+      <text x="173" y="0" class="scalar-text" fill="#333" font-style="italic">t</text>
+      <text x="186" y="-10" font-size="14" fill="#333">3</text>
+    </g>
+  </g>
+
+  <!-- Arrows between boxes -->
+  <line x1="245" y1="165" x2="305" y2="165" class="arr" marker-end="url(#arrG)"/>
+  <line x1="515" y1="165" x2="575" y2="165" class="arr" marker-end="url(#arrG)"/>
+
+  <text x="275" y="155" text-anchor="middle" class="iso-label">≅</text>
+  <text x="545" y="155" text-anchor="middle" class="iso-label">≅</text>
+
+  <text x="410" y="290" text-anchor="middle" font-size="13" fill="#666" font-style="italic">
+    Different objects, identical linear data — all three spaces have dimension 4 and are mutually isomorphic.
+  </text>
+</svg>
