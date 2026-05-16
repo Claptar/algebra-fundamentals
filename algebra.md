@@ -22,3 +22,31 @@ The goal is not only to list definitions, but to explain **why the axioms are ch
 8. [Vector Spaces](notes/algebra/08-vector-spaces.md)
 9. [Algebras over Fields](notes/algebra/09-algebras-over-fields.md)
 10. [One-Page Map of the Structures](notes/algebra/11-map-of-structures.md)
+
+## Recurring chapter pattern
+
+Most chapters follow this pattern:
+
+1. **Definition** — the formal object.
+2. **Central intuition** — what the structure is really trying to model.
+3. **What the axiom buys us** — what becomes possible.
+4. **What breaks without it** — why the axiom is not decorative.
+5. **Natural examples** — examples that are not merely artificial.
+6. **Place in the build-up** — how the structure connects to earlier and later ones.
+
+## Big guiding idea
+
+Algebra is largely the study of **operations and their laws**.
+
+A law is interesting when it lets us treat complicated expressions coherently:
+
+- associativity lets binary composition become finite composition;
+- an identity element lets us include the empty composition;
+- inverses let us undo actions;
+- commutativity makes order irrelevant;
+- distributivity links addition and multiplication;
+- scalar multiplication lets an external field control an additive world;
+- bilinearity lets multiplication inside a vector space respect linear combinations;
+- sigma-closure lets a language of events survive countable logical operations.
+
+The point is not memorizing axioms. The point is seeing what each axiom makes possible.
