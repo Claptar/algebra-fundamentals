@@ -93,15 +93,31 @@ $$e_1 = (1, 0, \dots, 0), \quad e_2 = (0, 1, \dots, 0), \quad \dots, \quad e_n =
 
 so $\dim K^n = n$. Every $x = (x_1, \dots, x_n)$ is $x_1 e_1 + \cdots + x_n e_n$. The basis is so embedded in the notation that we usually forget it is there — a habit we will need to break shortly.
 
-**Matrices $\operatorname{Mat}_{m \times n}(K)$.** The matrix units $E_{ij}$ (one in position $(i,j)$, zero elsewhere) form a basis. Every matrix is the sum of its entries times the corresponding $E_{ij}$, so $\dim \operatorname{Mat}_{m \times n}(K) = mn$.
+**Matrices $$\operatorname{Mat}_{m \times n}(K)$$.** The matrix units $E_{ij}$ (one in position $(i,j)$, zero elsewhere) form a basis. Every matrix is the sum of its entries times the corresponding $E_{ij}$, so $$\dim \operatorname{Mat}_{m \times n}(K) = mn$$.
 
 **Polynomials $K_{\leq n}[t]$.** The monomials $1, t, t^2, \dots, t^n$ form a basis, so $\dim K_{\leq n}[t] = n + 1$. But this is far from the only choice: the shifted basis $1,\ t-1,\ (t-1)^2,\ \dots,\ (t-1)^n$ also spans and is independent, and is more convenient for studying polynomials near $t = 1$.
 
 ### 2.3. Natural vs. chosen bases
 
-Some spaces come with a basis built into their definition: $K^n$, $\operatorname{Mat}_{m\times n}(K)$, $K_{\leq n}[t]$. Others do not.
+Some spaces come with a basis built into their definition: $K^n$, $$\operatorname{Mat}_{m\times n}(K)$$, $K_{\leq n}[t]$. Others do not.
 
-The geometric plane is the cleanest case. Its vectors are arrows — magnitude and direction — with no built-in coordinates. To do calculations we must *choose* two non-collinear vectors $u, v$ to serve as a basis. Different choices give different descriptions of the same arrow. Spaces of functions, spaces of solutions to differential equations, and many others have the same property: many useful bases, no preferred one.
+The geometric plane is the cleanest case. Its vectors are arrows — magnitude and direction — with no built-in coordinates. To do calculations we must *choose* two non-collinear vectors $u, v$ to serve as a basis. Different choices give different descriptions of the same arrow.
+
+**An analogy from physics.** This situation is exactly the one we face when measuring a physical quantity. Consider a stick lying on a table. The stick has a definite length — this is a physical fact, independent of human convention. But to *report* its length numerically, we must first choose a unit. In the metric system the stick might be $1.83$ metres long; in the imperial system the same stick is $6$ feet long. Both numbers describe the same stick, and neither is more correct than the other. They differ because the underlying *unit of length* is different.
+
+A basis plays exactly the same role for vectors. The vector itself — the arrow on the plane — exists independently of any coordinate system, just as the stick exists independently of metres or feet. To say "this vector has coordinates $(5, 4)$" presupposes a choice of two unit vectors that play the role of "one tick in each direction." Choose a different pair of unit vectors, and the same arrow has different coordinates, just as the same stick yields different numbers in metres and feet.
+
+| | physical length | vector in the plane |
+|---|---|---|
+| **the object** | a stick on the table | an arrow |
+| **the choice** | unit (metre or foot) | basis $(e_1, e_2)$ |
+| **the number(s)** | $1.83$ or $6$ | coordinates $(x_1, x_2)$ |
+| **what changes if we change the choice** | the number | the coordinates |
+| **what does not change** | the stick | the arrow |
+
+![Length in two unit systems, vector in two bases](figures/measurement_analogy.svg)
+
+The lesson is the same in both cases. Spaces of functions, spaces of solutions to differential equations, and many others all share this property with the geometric plane: many useful bases, no preferred one.
 
 This is where the central conceptual distinction of linear algebra emerges. A vector is one thing; its description in a basis is another.
 

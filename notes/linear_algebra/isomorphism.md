@@ -37,7 +37,7 @@ A crucial point of vocabulary: $V \simeq W$ does **not** mean $V = W$. Equality 
 
 ## 3. A concrete example
 
-Define $T : \operatorname{Mat}_{2\times 2}(K) \to K_{\leq 3}[t]$ by
+Define $$T : \operatorname{Mat}_{2\times 2}(K) \to K_{\leq 3}[t]$$ by
 
 $$T\!\begin{pmatrix} a & b \\ c & d \end{pmatrix} = a + bt + ct^2 + dt^3.$$
 
