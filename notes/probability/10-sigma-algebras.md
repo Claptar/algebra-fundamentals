@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "10. Sigma-Algebras"
+title: "Sigma-Algebras"
 ---
 
 # 10. Sigma-Algebras

@@ -1,8 +1,8 @@
-{% assign chapters = site.pages | where_exp: "p", "p.path contains 'chapters/'" | sort: "path" %}
+{% assign section_pages = site.pages | where: "section", page.section | sort: "path" %}
 {% assign prev_page = nil %}
 {% assign next_page = nil %}
 {% assign found = false %}
-{% for p in chapters %}
+{% for p in section_pages %}
   {% if found %}
     {% unless next_page %}{% assign next_page = p %}{% endunless %}
   {% elsif p.url == page.url %}

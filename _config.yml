@@ -1,5 +1,5 @@
-title: Algebra Fundamentals
-description: A motivated build-up of algebraic structures
+title: Math Notes
+description: Notes on algebra, probability theory, and linear algebra
 theme: jekyll-theme-minimal
 
 kramdown:
@@ -7,6 +7,20 @@ kramdown:
 
 defaults:
   - scope:
-      path: "chapters"
+      path: "notes/algebra"
     values:
       layout: default
+      sidebar: algebra
+      section: algebra
+  - scope:
+      path: "notes/probability"
+    values:
+      layout: default
+      sidebar: probability
+      section: probability
+  - scope:
+      path: "notes/linear_algebra"
+    values:
+      layout: default
+      sidebar: linear_algebra
+      section: linear_algebra

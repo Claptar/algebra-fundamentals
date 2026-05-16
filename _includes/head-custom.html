@@ -61,6 +61,21 @@
     font-weight: 700;
   }
 
+  .book-sidebar__back {
+    display: block;
+    margin-bottom: 16px;
+    padding: 5px 9px;
+    color: #6b7280;
+    font-size: 0.88em;
+    text-decoration: none;
+    border-radius: 6px;
+  }
+
+  .book-sidebar__back:hover {
+    color: #111827;
+    background: #f3f4f6;
+  }
+
   @media (min-width: 1180px) {
     body {
       padding-left: 220px;
@@ -125,39 +140,80 @@
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const currentPath = window.location.pathname.replace(/\/$/, "/index.html");
-    const homePath = "{{ '/' | relative_url }}".replace(/\/$/, "/index.html");
 
-    if (currentPath !== homePath) {
-      document.body.classList.add("book-inner-page");
-    }
+    document.body.classList.add("book-inner-page");
 
-    const links = [
-      { label: "Home", href: "{{ '/' | relative_url }}" },
-      { section: "Chapters" },
-      { label: "1. Binary Operations and Associativity", href: "{{ '/chapters/01-binary-operations-and-associativity.html' | relative_url }}" },
-      { label: "2. Semigroups and Monoids", href: "{{ '/chapters/02-semigroups-and-monoids.html' | relative_url }}" },
-      { label: "3. Groups and Reversibility", href: "{{ '/chapters/03-groups-and-reversibility.html' | relative_url }}" },
-      { label: "4. Symmetries and Groups", href: "{{ '/chapters/04-symmetries-and-groups.html' | relative_url }}" },
-      { label: "5. Commutativity and Abelian Groups", href: "{{ '/chapters/05-commutativity-and-abelian-groups.html' | relative_url }}" },
-      { label: "6. Rings and Distributivity", href: "{{ '/chapters/06-rings-and-distributivity.html' | relative_url }}" },
-      { label: "7. Fields and Scalar Arithmetic", href: "{{ '/chapters/07-fields-and-scalars.html' | relative_url }}" },
-      { label: "8. Vector Spaces", href: "{{ '/chapters/08-vector-spaces.html' | relative_url }}" },
-      { label: "9. Algebras over Fields", href: "{{ '/chapters/09-algebras-over-fields.html' | relative_url }}" },
-      { label: "10. Sigma-Algebras", href: "{{ '/chapters/10-sigma-algebras.html' | relative_url }}" },
-      { label: "11. Map of the Structures", href: "{{ '/chapters/11-map-of-structures.html' | relative_url }}" }
-    ];
+    const sidebarType = "{{ page.sidebar | default: 'topics' }}";
+
+    const sidebars = {
+      topics: {
+        title: "{{ site.title | default: 'Math Notes' }}",
+        titleHref: "{{ '/' | relative_url }}",
+        links: [
+          { section: "Topics" },
+          { label: "Algebra", href: "{{ '/algebra.html' | relative_url }}" },
+          { label: "Probability Theory", href: "{{ '/probability.html' | relative_url }}" },
+          { label: "Linear Algebra", href: "{{ '/linear_algebra.html' | relative_url }}" }
+        ]
+      },
+      algebra: {
+        title: "Algebra",
+        titleHref: "{{ '/algebra.html' | relative_url }}",
+        back: { label: "← All Topics", href: "{{ '/' | relative_url }}" },
+        links: [
+          { section: "Chapters" },
+          { label: "1. Binary Operations and Associativity", href: "{{ '/notes/algebra/01-binary-operations-and-associativity.html' | relative_url }}" },
+          { label: "2. Semigroups and Monoids", href: "{{ '/notes/algebra/02-semigroups-and-monoids.html' | relative_url }}" },
+          { label: "3. Groups and Reversibility", href: "{{ '/notes/algebra/03-groups-and-reversibility.html' | relative_url }}" },
+          { label: "4. Symmetries and Groups", href: "{{ '/notes/algebra/04-symmetries-and-groups.html' | relative_url }}" },
+          { label: "5. Commutativity and Abelian Groups", href: "{{ '/notes/algebra/05-commutativity-and-abelian-groups.html' | relative_url }}" },
+          { label: "6. Rings and Distributivity", href: "{{ '/notes/algebra/06-rings-and-distributivity.html' | relative_url }}" },
+          { label: "7. Fields and Scalar Arithmetic", href: "{{ '/notes/algebra/07-fields-and-scalars.html' | relative_url }}" },
+          { label: "8. Vector Spaces", href: "{{ '/notes/algebra/08-vector-spaces.html' | relative_url }}" },
+          { label: "9. Algebras over Fields", href: "{{ '/notes/algebra/09-algebras-over-fields.html' | relative_url }}" },
+          { label: "11. One-Page Map of the Structures", href: "{{ '/notes/algebra/11-map-of-structures.html' | relative_url }}" }
+        ]
+      },
+      probability: {
+        title: "Probability Theory",
+        titleHref: "{{ '/probability.html' | relative_url }}",
+        back: { label: "← All Topics", href: "{{ '/' | relative_url }}" },
+        links: [
+          { section: "Notes" },
+          { label: "Sigma-Algebras", href: "{{ '/notes/probability/10-sigma-algebras.html' | relative_url }}" }
+        ]
+      },
+      linear_algebra: {
+        title: "Linear Algebra",
+        titleHref: "{{ '/linear_algebra.html' | relative_url }}",
+        back: { label: "← All Topics", href: "{{ '/' | relative_url }}" },
+        links: [
+          { section: "Notes" }
+        ]
+      }
+    };
+
+    const config = sidebars[sidebarType] || sidebars.topics;
 
     const sidebar = document.createElement("nav");
     sidebar.className = "book-sidebar";
     sidebar.setAttribute("aria-label", "Book sections");
 
-    const title = document.createElement("a");
-    title.className = "book-sidebar__title";
-    title.href = "{{ '/' | relative_url }}";
-    title.textContent = "{{ site.title | default: 'Algebra Fundamentals' }}";
-    sidebar.appendChild(title);
+    const titleEl = document.createElement("a");
+    titleEl.className = "book-sidebar__title";
+    titleEl.href = config.titleHref;
+    titleEl.textContent = config.title;
+    sidebar.appendChild(titleEl);
 
-    links.forEach(function (item) {
+    if (config.back) {
+      const back = document.createElement("a");
+      back.className = "book-sidebar__back";
+      back.href = config.back.href;
+      back.textContent = config.back.label;
+      sidebar.appendChild(back);
+    }
+
+    config.links.forEach(function (item) {
       if (item.section) {
         const section = document.createElement("div");
         section.className = "book-sidebar__section";
