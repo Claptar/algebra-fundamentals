@@ -82,27 +82,7 @@ This matrix $C$ is called the **change-of-basis matrix** from the old basis $e$ 
 
 ---
 
-## 4. Deriving $e' = eC$
-
-We want to understand the compact formula $e' = eC$.
-
-Start with $e = (e_1, \dots, e_n)$. Take the first column of $C$:
-
-$$e \begin{pmatrix} c_{11} \\ c_{21} \\ \vdots \\ c_{n1} \end{pmatrix} = c_{11} e_1 + c_{21} e_2 + \cdots + c_{n1} e_n = e'_1.$$
-
-Similarly, for the $j$-th column,
-
-$$e \begin{pmatrix} c_{1j} \\ c_{2j} \\ \vdots \\ c_{nj} \end{pmatrix} = e'_j.$$
-
-Therefore multiplying the row of old basis vectors by the whole matrix $C$ gives the row of new basis vectors:
-
-$$eC = (e'_1, \dots, e'_n) = e'.$$
-
-So $e' = eC$. This formula is just the simultaneous writing of all the expansions $e'_j = \sum_{i=1}^n c_{ij} e_i$. The matrix $C$ stores the new basis vectors in old coordinates.
-
----
-
-## 5. Coordinates of the same vector in two bases
+## 4. Coordinates of the same vector in two bases
 
 Let $x \in V$. Suppose its coordinate column in the old basis is $X$ and in the new basis is $X'$. Then
 
@@ -123,8 +103,6 @@ $$X' = C^{-1} X.$$
 So
 
 $$\boxed{X = CX' \quad \text{and} \quad X' = C^{-1} X.}$$
-
-![Derivation chain](figures/diag3_derivation_chain.svg)
 
 The matrix $C$ sends new coordinates to old coordinates. The inverse matrix $C^{-1}$ sends old coordinates to new coordinates.
 
