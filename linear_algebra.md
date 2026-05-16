@@ -12,3 +12,4 @@ Notes on linear algebra: vector spaces, matrices, and linear maps.
 
 1. [Linear Span, Basis, and Coordinates](notes/linear_algebra/basis_coordinates.md)
 2. [Isomorphism of Vector Spaces](notes/linear_algebra/isomorphism.md)
+3. [Change of Basis](notes/linear_algebra/changeofbasis.md)
