@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 360" font-family="Georgia, 'Times New Roman', serif">
+  <defs>
+    <marker id="arrBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1f4e79"/>
+    </marker>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c0392b"/>
+    </marker>
+  </defs>
+
+  <style>
+    .grid { stroke: #eaeaea; stroke-width: 1; }
+    .axis { stroke: #999; stroke-width: 1.2; }
+    .vec-blue { stroke: #1f4e79; stroke-width: 2.5; fill: none; }
+    .vec-red { stroke: #c0392b; stroke-width: 2.5; fill: none; }
+    .ghost { stroke: #888; stroke-width: 1.2; stroke-dasharray: 5 4; fill: none; }
+    .label { font-size: 17px; font-style: italic; }
+    .caption { font-size: 14px; fill: #555; }
+    .title { font-size: 15px; fill: #333; }
+  </style>
+
+  <text x="250" y="25" text-anchor="middle" class="title">w = e₁ + e₂ is already in span(e₁, e₂) — it is redundant</text>
+
+  <!-- grid -->
+  <g class="grid">
+    <line x1="80" y1="60" x2="80" y2="340"/>
+    <line x1="160" y1="60" x2="160" y2="340"/>
+    <line x1="240" y1="60" x2="240" y2="340"/>
+    <line x1="320" y1="60" x2="320" y2="340"/>
+    <line x1="400" y1="60" x2="400" y2="340"/>
+    <line x1="40" y1="100" x2="440" y2="100"/>
+    <line x1="40" y1="180" x2="440" y2="180"/>
+    <line x1="40" y1="260" x2="440" y2="260"/>
+    <line x1="40" y1="340" x2="440" y2="340"/>
+  </g>
+
+  <!-- axes -->
+  <line x1="40" y1="260" x2="440" y2="260" class="axis"/>
+  <line x1="160" y1="60" x2="160" y2="340" class="axis"/>
+
+  <!-- e1 = (1,0) -->
+  <line x1="160" y1="260" x2="240" y2="260" class="vec-blue" marker-end="url(#arrBlue)"/>
+  <!-- e2 = (0,1) -->
+  <line x1="160" y1="260" x2="160" y2="180" class="vec-blue" marker-end="url(#arrBlue)"/>
+  <!-- w = (1,1) -->
+  <line x1="160" y1="260" x2="240" y2="180" class="vec-red" marker-end="url(#arrRed)"/>
+
+  <!-- parallelogram showing w = e1 + e2 -->
+  <line x1="240" y1="260" x2="240" y2="180" class="ghost"/>
+  <line x1="160" y1="180" x2="240" y2="180" class="ghost"/>
+
+  <!-- labels -->
+  <text x="245" y="275" class="label" fill="#1f4e79">e₁</text>
+  <text x="140" y="178" class="label" fill="#1f4e79">e₂</text>
+  <text x="247" y="172" class="label" fill="#c0392b">w</text>
+
+  <!-- origin -->
+  <circle cx="160" cy="260" r="3" fill="#333"/>
+  <text x="148" y="278" class="caption">0</text>
+
+  <!-- explanation -->
+  <text x="250" y="332" text-anchor="middle" class="caption">Adding w to {e₁, e₂} does not enlarge the span: span(e₁, e₂, w) = span(e₁, e₂) = ℝ²</text>
+</svg>
